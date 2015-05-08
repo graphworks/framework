@@ -1,0 +1,245 @@
+// graphworks frameworks v3.0 - configuration
+// _____________________________________________
+
+
+
+// document, body, canvas settings
+$full-canvas-width:             1400px;
+$document-bg:                   #ebebeb;
+$content-bg:                    #FFFFFF;
+
+
+
+// forms configuration
+
+///////////////////////////////////////////////////
+$form-font-size:                12px;
+$form-height:                   40px;
+$form-border:                   1px solid #dcdcdc;
+$form-border-focus:             1px solid #dcdcdc;
+
+// select
+$global-elements-font:          'Open Sans', sans-serif;
+$select-font-size:              12px;
+$select-height:                 45px;
+$select-border:                 1px solid #dcdcdc !important;
+$select-border-radius:          3px;
+$select-dd-border:              1px solid #dcdcdc;
+$select-option-border:          1px dotted #e6e8ea;
+    
+
+
+
+// navigation configuration
+
+///////////////////////////////////////////////////
+$header-bg:                     none;
+$nav-position:                  fixed;
+$nav-item-number:               6;
+$nav-border:                    0px;
+
+$hamburger-size:                7%;
+$hamburger-max-size:            30px;
+
+$nav-background:                1px solid rgba(0, 0, 0, 0.1);
+$nav-height:                    74px;
+$nav-align:                     right;
+$nav-item-padding:              0 12px;
+$nav-item-fontsize:             14px;
+
+$logo-width:                    20%;
+$logo-min-width:                180px;
+$logo-max-width:                280px;
+
+$mobile-nav-li-height:          50px;
+$mobile-nav-li-font-weight:     400 !important;
+
+
+
+
+// typography configuration
+
+///////////////////////////////////////////////////
+// headlings
+$headling-font-fammily:         'Open Sans', sans-serif;
+$paragraph-font-fammily:        'Open Sans', sans-serif;
+
+$headling1-font-size:   3.5rem;
+$headling2-font-size:   3.1rem;
+$headling3-font-size:   2.7rem;
+$headling4-font-size:   2.4rem;
+$headling5-font-size:   2.0rem;
+$headling6-font-size:   1.6rem;
+
+$headling1-lineheight:  $headling1-font-size *1.6;
+$headling2-lineheight:  $headling2-font-size *1.6;
+$headling3-lineheight:  $headling3-font-size *1.6;
+$headling4-lineheight:  $headling4-font-size *1.55;
+$headling5-lineheight:  $headling5-font-size *1.5;
+$headling6-lineheight:  $headling6-font-size *1.4;
+
+// paragraph
+$paragraph-font-size:   1.6rem;
+$paragraph-lineheight:  $paragraph-font-size *1.5;
+
+// font-weights
+$font-weight-ultra:     100 !important;
+$font-weight-light:     200 !important;
+$font-weight-normal:    300 !important;
+$font-weight-bold:      700 !important;
+$font-weight-black:     800 !important;
+
+
+
+
+
+// colors configuration
+
+///////////////////////////////////////////////////
+// typography colors
+$headling1-color:       #888888;
+$headling2-color:       #888888;
+$headling3-color:       #888888;
+$headling4-color:       #888888;
+$headling5-color:       #888888;
+$headling6-color:       #888888;
+
+$paragraph_color:       #888888;
+
+// links
+$link-normal:           #888888;
+$link-hover:            #888888;
+$link-visited:          #888888;
+$link-active:           #888888;
+
+// navigation
+$nav-bg-color:                      rgba(255, 255, 255, 1.0);
+
+$nav-item-color:                    #777777 !important;
+$nav-item-color-current:            #FFFFFF !important;
+$nav-item-color-current-bg:         #71619a !important;
+$nav-item-color-hover:              #777777;
+$nav-item-color-hover-bg:           #f2f2f2;
+
+$hamburger-color:                   #CCCCCC;
+$hamburger-color-hover:             #BCBCBC;
+$mobile-nav-li-separator:           1px solid rgba(0, 0, 0, 0.1);
+$mobile-nav-li-bg:                  rgba(255, 255, 255, 1.0);
+$mobile-nav-li-color:               #f9a244;
+$mobile-nav-li-bg-current:          rgba(255, 255, 255, 1.0);
+$mobile-nav-li-color-current:       #8f8e8e;
+
+// input colors
+$input-placeholder-color:           #6d6d6d;
+$input-placeholder-color-focus:     #eaeaea;
+$form-color:                        #6d6d6d;
+$form-background:                   #f9f9f9;
+$form-background-focus:             #FFFFFF;
+
+// radio, checkbox
+$radio-check-label-color:           #93979d;
+$radio-check-label-checked-color:   #71619a;
+$radio-check-label-disabled-color:  #e6e8ea;
+$radio-check-icon-color:            #93979d;
+$radio-check-icon-checked-color:    #71619a;
+$radio-check-icon-disabled-color:   #e6e8ea;
+    
+// select
+$select-color:                      #6d6d6d;
+$select-background:                 #f9f9f9;
+$select-dd-background:              #f9f9f9;
+$select-option-color:               #6d6d6d;
+$select-option-color-category:      #454545;
+$select-option-color-hover:         #333333;
+
+// buttons
+$color-bg-1:                        #71619a;
+$color-bg-2:                        #48505a;
+$color-bg-3:                        rgb(186, 190, 193);
+$color-bg-4:                        rgb(160, 207, 58);
+
+$color-txt-1:                       #FFFFFF;
+$color-txt-2:                       #FFFFFF;
+$color-txt-3:                       #FFFFFF;
+$color-txt-4:                       #FFFFFF;
+
+// notifications
+$func_color_danger:                 #e66959;
+$func_color_warning:                #fdc347;
+$func_color_info:                   #88cceb;
+$func_color_success:                #bad964;
+
+// table
+$table-border-color:                #CCCCCC;
+$table-font-color:                  #575757;
+$table-td-font-color:               #575757;
+$table-header-color:                #efefef;
+
+// flickerplate
+$flickerplate-button:               #71619a;
+$flickerplate-h2-color:             #71619a;
+$flickerplate-h3-color:             #FFFFFF;
+
+
+
+// grid system configuration
+
+///////////////////////////////////////////////////
+// helpers
+$full:        		    100%;
+$half:        		    100% / 2;
+$third:        		    100% / 3;
+
+// media queries breakpoints
+$x-small:               20em;      // Below 320px mobile
+$small:       		    30em;      // Portrait mobile(481px) to landscape mobile(768px)
+$medium:      		    50em;      // Portrait tablet(768px) to landscape tablet(1024px)
+$large:       		    68.750em;  // Small desktop(1100) to large desktop
+$x-large:       	    87.500em;  // Large desktops and above
+
+// padding for grid
+$col-padding: 		    0.6em;
+
+// grid widths
+$start:       		    1;
+$end:         		    12;
+
+// commons (fixed) widths
+$common:                25, 35, 50, 65, 75;
+
+// frame width (grid wrapper)
+$frame-width-small: 	90%;
+$frame-width-medium: 	91%;
+$frame-width-large: 	93%;
+$frame-width-huge: 	    $full-canvas-width *0.9;
+
+// cleaner line
+$cleaner-line-width:    16px;
+$cleaner-line-color:    #CCCCCC;
+$cleaner-line-color-width:  1px;
+
+
+
+
+// flickerplate
+
+///////////////////////////////////////////////////
+
+
+
+
+
+// other variables
+
+///////////////////////////////////////////////////
+
+$graphworks-color:      #71619a;
+
+/* transitons */
+$transition:            600ms;
+$transition-2:          300ms;
+$transition-3:          800ms;
+
+// table
+$table-before-width: 6.5em;
+$table-lineheight: 3.4em;

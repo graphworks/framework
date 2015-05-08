@@ -1,0 +1,37 @@
+// graphworks frameworks v3.0 - correctors
+
+///////////////////////////////////////////////////
+// Made by graphworks (@rpkaaa)
+
+body {margin:0; padding:0;}
+
+.float_r { float: right !important; margin-right: 0 !important;}
+.float_l { float: left !important; margin-left: 0 !important;}
+
+.pos_rel {position: relative !important;}
+.pos_abs {position: absolute !important;}
+
+.disp_none {display:none;}
+.disp_block {display: block;}
+
+.cleaner {
+    width: 100%;
+    clear: both;
+    
+    &.h5 {height: 5px}
+    &.h10 {height: 10px}
+    &.h15 {height: 15px}
+    &.h20 {height: 20px}
+    &.h30 {height: 30px}
+    &.h40 {height: 40px}
+    &.h50 {height: 50px}
+    &.h60 {height: 60px}
+    &.h80 {height: 80px}
+    
+    &.line {
+        height: $cleaner-line-color-width;
+        margin-top: $cleaner-line-width /2;
+        margin-bottom: $cleaner-line-width /2;
+        background-color: $cleaner-line-color;
+    }
+}

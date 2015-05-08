@@ -1,0 +1,25 @@
+// hard reset
+* {
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+}
+
+    body { 
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: $document-bg;
+    }
+    section {
+        background-color: $content-bg; 
+        max-width: $full-canvas-width; 
+        margin: 0 auto;
+    }
+    footer {
+        padding: 20px 0;
+    }
+
+h6.made { font-size: 14px;}
+.made a {color: $graphworks-color !important; font-weight: bold;}
+.made .icon-love {color:#ed527d;}

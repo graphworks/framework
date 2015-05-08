@@ -1,0 +1,256 @@
+// graphworks frameworks v3.0 - slider
+
+///////////////////////////////////////////////////
+// Made With Chris Humboldts's (@chrishumboldt) Flickerplate
+// Documentation: http://getwebplate.com/plugins/flickerplate
+
+
+.flickerplate {
+    position: relative;
+    width: 100%;
+    max-width: 1450px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    .content {
+        bottom: 20%;
+        width: 52%;
+        position: absolute;
+
+    }
+
+    ul {
+        &.flicks {
+            width: 10000%;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+
+            > li {
+                float: left;
+                width: 1%;
+                background-position: center;
+                background-size: cover;
+                vertical-align: bottom;
+                line-height: normal !important;
+                max-width: 100%;
+                height: auto;
+                
+                h2 {padding:10px 0; color: $flickerplate-h2-color;}
+                h3 {padding: 10px 0;  color:#FFFFFF !important;}
+                
+                .image {
+                    min-height: 340px;
+                    max-height: 480px;
+                }
+
+                img {
+                    overflow: hidden;
+                    max-width: 100%;
+                    height: auto;
+                    width: 100%;
+                    min-height: 340px;
+                }
+
+                .flick-inner {
+                    vertical-align: bottom;
+                    line-height: normal !important;
+                    max-width: 100%;
+                    height: auto;
+
+                    .flick-content {
+                        margin-left: auto;
+                        margin-right: auto;
+                        position: relative;
+                    }
+
+                    .button {
+                        display: inline-block;
+                        text-decoration: none;
+                        background: $flickerplate-button;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        padding: 0 3.5%;
+                        color: #ffffff;
+                        margin-top: 25px;
+
+                        &:hover {
+                            background: lighten($flickerplate-button,10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .arrow-navigation {
+        position: absolute;
+        height: 80%;
+        width: 10%;
+        top: 10%;
+        z-index: 100;
+        overflow: hidden;
+
+        .arrow {
+            display: block;
+            height: 100%;
+            width: 90%;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out
+        }
+
+        &:hover, .arrow:hover {
+            cursor: pointer
+        }
+
+        &.left {
+            left: 0%;
+
+            .arrow {
+                opacity: 0;
+                margin: 0px 0px 0px 50%;
+            }
+
+            &.hover {
+                .arrow {
+                    opacity: 1;
+                    margin: 0px 0px 0px 20%
+                }
+            }
+        }
+
+        &.right {
+            right: 0%;
+
+            .arrow {
+                opacity: 0;
+                margin: 0px 0px 0px -50%;
+            }
+
+            &.hover {
+                .arrow {
+                    opacity: 1;
+                    margin: 0px 0px 0px -20%
+                }
+            }
+        }
+
+    }
+
+    .dot-navigation {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+        text-align: center;
+        z-index: 9;
+        right: 0;
+
+        ul {
+            text-align: right;
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                float: none
+            }
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            margin: 0px 3px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -webkit-transition: background-color 0.2s ease-out;
+            -moz-transition: background-color 0.2s ease-out;
+            -o-transition: background-color 0.2s ease-out;
+            -ms-transition: background-color 0.2s ease-out;
+            transition: background-color 0.2s ease-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.75);
+            }
+
+            &.active {
+                background-color: rgba(255, 255, 255, 1.0);
+            }
+
+        }
+    }
+}
+
+
+.flickerplate .dot-navigation.left, .flickerplate .dot-navigation.left ul {
+    text-align: left
+}
+.flickerplate .dot-navigation.center, .flickerplate .dot-navigation.center ul {
+    text-align: center
+}
+.flickerplate .dot-navigation.right, .flickerplate .dot-navigation.right ul {
+    text-align: right
+}
+
+.flickerplate.animate-transform-slide ul.flicks {
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0%, 0px, 0px);
+    -webkit-transform: translate3d(0%, 0px, 0px);
+    -webkit-transition: -webkit-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    transition: transform 0.6s
+}
+
+.flickerplate.animate-transition-slide ul.flicks {
+    position: relative;
+    left: 0%;
+    -webkit-transition: left 0.4s ease-out;
+    -moz-transition: left 0.4s ease-out;
+    -o-transition: left 0.4s ease-out;
+    -ms-transition: left 0.4s ease-out;
+    transition: left 0.4s ease-out
+}
+
+.flickerplate.animate-jquery-slide ul.flicks {
+    position: relative;
+    left: 0%
+}
+
+.flickerplate.animate-scroller-slide {
+    padding-bottom: 0px;
+    overflow: auto
+}
+
+.flickerplate.animate-scroller-slide ul.flicks {
+    position: static;
+}
+
+@media only screen and (max-width: 720px) {
+     .flicker-slider ul li .gridContainer .content h2 {padding: 14px !important;}
+     .flicker-slider ul li .gridContainer .content h3 {display: none;}
+}
+@media only screen and (min-width: 720px) and (max-width: 800px) {
+     .flicker-slider ul li .gridContainer .content h2 {font-size: 26px;}
+     .flicker-slider ul li .gridContainer .content h3 {font-size: 16px;}
+}
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+     .flicker-slider ul li .gridContainer .content h2 {font-size: 30px}
+     .flicker-slider ul li .gridContainer .content h3 {font-size: 17px}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+     .flicker-slider ul li .gridContainer .content h2 {font-size: 40px}
+     .flicker-slider ul li .gridContainer .content h3 {font-size: 19px}
+}

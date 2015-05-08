@@ -1,0 +1,21 @@
+/* transitons */
+.box {
+  background: #fff373;
+  font-family: "Futura", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 0; }
+  .box--new {
+    background: #bad964; }
+
+#buttons {
+  background-image: url(../image/graphworks.svg);
+  background-repeat: no-repeat;
+  background-position: 105% -40%;
+  background-size: 40%; }
+
+.color_bg_2 {
+  background-color: #ebebeb;
+  border-bottom: solid 1px #e6e8ea; }
+
+/*# sourceMappingURL=demo.css.map */

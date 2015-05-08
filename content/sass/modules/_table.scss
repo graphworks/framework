@@ -1,0 +1,88 @@
+// graphworks frameworks v3.0 - table
+
+///////////////////////////////////////////////////
+// Made With Filament Group's (@filamentgroup) RWD Table
+// Documentation: https://github.com/filamentgroup/tablesaw
+
+.rwd-table {
+  margin: 1em 0;
+  width: 100%;
+  min-width: 300px; // adjust to your needs
+    
+  tr {
+    border-top: 1px solid $table-border-color;
+    border-bottom: 1px solid $table-border-color;
+    border-left: 1px solid $table-border-color;
+    border-right: 1px solid $table-border-color;
+    box-sizing: border-box;
+    line-height: $table-lineheight / 2
+  }
+  
+  th {
+    display: none;
+  }
+  
+  td {
+    display: block;
+    
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th)" ";
+      font-weight: bold;
+      width: $table-before-width; // adjust according to your own content
+      display: inline-block;
+      
+      @media (min-width: $medium) {
+        display: none;
+      }
+    }
+  }
+  
+  th, td {
+    text-align: left;
+    
+      @media (min-width: $medium) {
+      display: table-cell;
+      padding: .25em .5em;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+  } 
+}
+        
+// presentational styling
+.rwd-table {
+  color: $table-font-color;
+  overflow: hidden;
+            
+  tr {
+    border-color: lighten(#999999, 10%);
+  }
+  th {
+    line-height: $table-lineheight;
+    background-color: $table-header-color;
+  }
+  th, td {
+    @media (min-width: $medium) { 
+      padding: 1em !important; 
+    }
+  }
+  th, td:before {
+    color: $table-td-font-color;
+    margin: .5em 1em;
+    
+  }
+}

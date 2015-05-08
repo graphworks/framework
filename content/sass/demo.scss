@@ -1,0 +1,15 @@
+@import '_configuration';
+
+.box {
+	background: #fff373;
+	font-family: "Futura", sans-serif;
+	font-size: 14px;
+	text-align: center;
+	padding: 20px 0;
+
+	&--new {
+		background: $func_color_success;
+	}
+}
+#buttons {background-image:url(../image/graphworks.svg); background-repeat: no-repeat; background-position: 105% -40%; background-size:40%;}
+.color_bg_2 {background-color:$document-bg; border-bottom:solid 1px #e6e8ea;}

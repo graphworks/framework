@@ -1,0 +1,82 @@
+.popup-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 10000000;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+
+    &.hidden {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        visibility: hidden;
+    }
+    &.visible {
+        visibility: visible;
+        opacity: 100%;
+        filter: alpha(opacity=100);
+    }
+}
+
+.popup {
+    display: block;
+    position: fixed;
+    width: 80%;
+    max-width: 1200px;
+    height: 100%;
+    top: 0;
+    left: 10%;
+    margin-left: 0px;
+    background-color: #fff;
+    overflow-y: scroll;
+    z-index: 10000001;
+    -webkit-transition: all 0.65s ease-out;
+    -moz-transition: all 0.65s ease-out;
+    -o-transition: all 0.65s ease-out;
+    -ms-transition: all 0.65s ease-out;
+    transition: all 0.65s ease-out;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+    
+    &.hidden {
+        top: -120%;
+    }
+    &.visible {
+        top: 0%;
+    }
+    a.close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        line-height: 30px;
+        color: #767676;
+        text-decoration: none;
+        z-index: 10000002;
+    
+        &:hover {
+            color: #999999;
+        }
+    }
+    .loadcontent {
+        display: block;
+        padding: 50px 30px;
+    }
+}
+
+@media only screen and (max-width: 43.813em) {
+    .popup{
+        width: 100%;
+        left: 0;
+    }   
+}

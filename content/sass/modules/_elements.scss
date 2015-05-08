@@ -1,0 +1,419 @@
+// graphworks frameworks v3.0 - elements (notification, selectbox, checkbox, radio, breadcumb)
+
+///////////////////////////////////////////////////
+// Made With Dimitar Ivanov's (@DimitarIvanov) Selectbox JQuery Plugin
+// Documentation: http://www.bulgaria-web-developers.com/projects/javascript/selectbox/
+
+// Made With Designmondo's (@Designmondo) Flatui Checkboxes/Radios JQuery Plugin
+// Documentation: http://designmodo.github.io/Flat-UI/
+
+
+.notification {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+    margin-bottom: 20px;
+    position: relative;
+}
+.close {
+    position:absolute;
+    right:6px;
+    top:6px;
+    width:20px;
+    height:20px;
+    font-size: 20px;
+    cursor:pointer;
+    border:1px solid #000;
+    z-index: 5;
+    border: 0;
+    cursor: pointer;
+    display: block;
+}
+
+.danger {color: $func_color_danger !important;}
+.warning {color: $func_color_warning !important;}
+.info {color: $func_color_info !important;}
+.success {color: $func_color_success !important;}
+
+.danger:hover {color: lighten($func_color_danger, 8%) !important;}
+.warning:hover {color: lighten($func_color_warning, 8%) !important;}
+.info:hover {color: lighten($func_color_info, 8%) !important;}
+.success:hover {color: lighten($func_color_success, 8%) !important;}
+
+.danger.inv {background-color: $func_color_danger !important; color: #FFFFFF !important;}
+.warning.inv {background-color: $func_color_warning !important; color: #FFFFFF !important;}
+.info.inv {background-color: $func_color_info !important; color: #FFFFFF !important;}
+.success.inv {background-color: $func_color_success !important; color: #FFFFFF !important;}
+
+.danger.inv:hover {background-color: lighten($func_color_danger, 8%) !important;}
+.warning.inv:hover {background-color: lighten($func_color_warning, 8%) !important;}
+.info.inv:hover {background-color: lighten($func_color_info, 8%) !important;}
+.success.inv:hover {background-color: lighten($func_color_success, 8%) !important;}
+
+/* Select */
+.sbHolder {
+	background-color: $select-background;
+	border: $select-border;
+	font-family: $global-elements-font;
+	font-size: $select-font-size;
+	font-weight: normal;
+	height: $select-height;
+	position: relative;
+	width: 100%;
+    outline: 0 !important;
+    margin-bottom: 15px !important;
+    @include border-radius($select-border-radius)
+}
+.sbHolder:focus .sbSelector {
+}
+.sbSelector {
+	display: block;
+	height: $select-height;
+	left: 0;
+	line-height: $select-height;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 10px;
+	top: 0;
+	width: 100%;
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover {
+	color: $select-color;
+	outline: none;
+	text-decoration: none;
+}
+.sbToggle:before {
+	/*background: url(../img/select-icons.png) 0 -116px no-repeat;*/
+    content: "\e616";
+    font-family: 'icomoon';
+    font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    line-height: 45px;
+	display: block;
+	height: 45px;
+	outline: none !important;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+    color: $select-color;
+}
+.sbToggle:hover {
+	/* background: url(../img/select-icons.png) 0 -167px no-repeat; */
+}
+.sbToggleOpen:before {
+	/* background: url(../img/select-icons.png) 0 -16px no-repeat; */
+    content: "\e61a" !important;
+}
+.sbToggleOpen:hover {
+	/* background: url(../img/select-icons.png) 0 -66px no-repeat; */
+}
+.sbHolderDisabled {
+	background-color: #3C3C3C;
+	border: solid 1px #515151;
+}
+.sbHolderDisabled .sbHolder {
+	
+}
+.sbHolderDisabled .sbToggle {
+	
+}
+.sbOptions {
+	background-color: $select-dd-background;
+	border: $select-dd-border;
+	list-style: none;
+	left: -1px;
+	margin: -1px 0 0 0;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	width: 100%;
+	z-index: 1;
+	overflow-y: auto;
+}
+.sbOptions li {
+	padding: 0 7px;
+}
+.sbOptions a {
+	border-bottom: dotted 1px #e6e8ea;
+	display: block;
+	outline: none;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions a:link, .sbOptions a:visited {
+	color: $select-option-color;
+	text-decoration: none;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: $select-option-color-hover;
+    background: lighten($select-dd-background, 50%);
+}
+.sbOptions li.last a {
+	border-bottom: none;
+}
+.sbOptions .sbDisabled {
+	border-bottom: dotted 1px #e6e8ea;
+	color: $select-option-color;
+	display: block;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbGroup {
+	border-bottom: $select-option-border;
+	color: $select-option-color-category;
+	display: block;
+	font-weight: bold;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbSub {
+	padding-left: 17px;
+}
+
+/* Checkbox, Radio */
+.checkbox,
+.radio {
+    position: relative;
+    -webkit-transition: color 0.25s linear;
+    transition: color 0.25s linear;
+    font-size: 15px;
+    color: $radio-check-label-color; /******* Label text color *******/
+    line-height: 1.5;
+    padding: 0 0 0 28px;
+    margin:0 20px 12px 0;
+    display: block;
+}
+.checkbox input, .radio input {outline: none !important;display: none;}
+.checkbox .icons,
+.radio .icons {
+    color: $radio-check-icon-color; /******* Glyph icon color *******/
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: color 0.25s linear;
+    transition: color 0.25s linear;
+}
+.checkbox .icons .first-icon,
+.radio .icons .first-icon,
+.checkbox .icons .second-icon,
+.radio .icons .second-icon {
+    display: inline-table;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    margin: 0;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.checkbox .icons .second-icon,
+.radio .icons .second-icon {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.checkbox:hover,
+.radio:hover {
+    -webkit-transition: color 0.25s linear;
+    transition: color 0.25s linear;
+}
+.checkbox:hover .first-icon,
+.radio:hover .first-icon {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.checkbox:hover .second-icon,
+.radio:hover .second-icon {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.checkbox.checked,
+.radio.checked {
+    color: $radio-check-label-checked-color; /******* Checked label color *******/
+}
+.checkbox.checked .first-icon,
+.radio.checked .first-icon {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.checkbox.checked .second-icon,
+.radio.checked .second-icon {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: $radio-check-icon-checked-color; /******* Checked glyph color *******/
+    -webkit-transition: color 0.25s linear;
+    transition: color 0.25s linear;
+}
+.checkbox.disabled,
+.radio.disabled {
+    cursor: default;
+    color: $radio-check-label-disabled-color; /******* Disabled text color *******/
+}
+.checkbox.disabled .icons,
+.radio.disabled .icons {
+    color: $radio-check-icon-disabled-color; /******* Disabled glyph color *******/
+}
+.checkbox.disabled .first-icon,
+.radio.disabled .first-icon {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.checkbox.disabled .second-icon,
+.radio.disabled .second-icon {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.checkbox.disabled.checked .icons,
+.radio.disabled.checked .icons {
+    color: $radio-check-icon-disabled-color; /******* Disabled glyph color *******/
+}
+.checkbox.disabled.checked .first-icon,
+.radio.disabled.checked .first-icon {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.checkbox.disabled.checked .second-icon,
+.radio.disabled.checked .second-icon {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: $radio-check-icon-disabled-color; /******* Disabled glyph color *******/
+}
+.radio + .radio,
+.checkbox + .checkbox {
+    margin-top: 10px;
+}
+
+
+/* BreadCrumb */
+.breadcrumb {
+  list-style: none;
+  display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #73629c;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+	overflow:hidden;
+}
+.breadcrumb ul{
+    border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+    
+}
+.breadcrumb .icon {
+  font-size: 32px;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    padding-right: 8px;
+}
+.breadcrumb li {
+  float: left;
+}
+.breadcrumb li a {
+  color: #FFF;
+  display: block;
+  background: #73629c;
+  text-decoration: none;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px 0 10px;
+  text-align: center;
+  margin-right: 20px;
+    -webkit-transition: none;
+	-o-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-kthtml-transition: none;
+	transition: none;
+}
+.breadcrumb li:nth-child(even) a {
+  background-color: #8779b2;
+}
+.breadcrumb li:nth-child(even) a:before {
+  border-color: #8779b2;
+  border-left-color: transparent;
+}
+.breadcrumb li:nth-child(even) a:after {
+  border-left-color: #8779b2;
+}
+.breadcrumb li:first-child a {
+  padding-left: 15px;
+}
+.breadcrumb li:first-child a:before {
+  border: none;
+}
+.breadcrumb li:last-child a {
+  padding-right: 15px;
+}
+.breadcrumb li:last-child a:after {
+  border: none;
+}
+.breadcrumb li a:before, .breadcrumb li a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #73629c;
+  border-width: 30px 15px;
+  width: 0;
+  height: 0;
+}
+.breadcrumb li a:before {
+  left: -22px;
+  border-left-color: transparent;
+}
+.breadcrumb li a:after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #73629c;
+}
+.breadcrumb li a:hover,
+.breadcrumb li a.current,
+.breadcrumb li a.current:hover {
+  background-color: #1abc9c;
+}
+.breadcrumb li a:hover:before,
+.breadcrumb li a.current:before,
+.breadcrumb li a.current:hover:before {
+  border-color: #1abc9c;
+  border-left-color: transparent;
+}
+.breadcrumb li a:hover:after,
+.breadcrumb li a.current:after,
+.breadcrumb li a.current:hover:after {
+  border-left-color: #1abc9c;
+}
+.breadcrumb li a:active {
+  background-color: #16a085;
+}
+.breadcrumb li a:active:before {
+  border-color: #16a085;
+  border-left-color: transparent;
+}
+.breadcrumb li a:active:after {
+  border-left-color: #16a085;
+}

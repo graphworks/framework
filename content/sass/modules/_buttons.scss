@@ -1,0 +1,181 @@
+// graphworks frameworks v3.0 - buttons
+
+///////////////////////////////////////////////////
+.button, .btn, button, input[type="button"], input[type="submit"] {
+    width: auto;
+    display: block;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 0;
+    background: darken(white, 5%);
+    color: lighten(black, 20%);
+    text-decoration: none;
+    text-align: center;
+    font-weight: normal;
+    cursor: pointer;
+    @include transition(all, $transition, ease);
+    
+    &:hover {
+        background: darken(white, 10%);
+        @include transition(all, $transition-2, ease);
+    }   
+    &.w100 {
+        width: 100%;
+        clear: both;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+    &.invert {
+        border: 2px solid darken(white, 5%);
+        background: none !important;
+        
+        &:hover {
+            background: transparentize(white, .90) !important;
+        }
+    }
+    &.small {
+        padding: .25em 1em;
+        font-size: .75em;
+    }
+    &.normal {
+        padding: .5em 1.75em;
+        font-size: 1em;
+    }
+    &.large {
+        padding: .75em 2em;
+        font-size: 1.1em;
+    }
+    &.huge {
+        padding: 1em 3em;
+        font-size: 1.25em;
+    }
+    
+    &.round-2 {
+    @include border-radius(2px);
+    }
+    &.round-3 {
+    @include border-radius(3px);
+    }
+    &.round-4 {
+    @include border-radius(4px);
+    }
+    &.round-6 {
+    @include border-radius(6px);
+    }
+    &.round-8 {
+    @include border-radius(8px);
+    }
+
+
+    &.btn_1 {
+        background: $color-bg-1;
+        color: $color-txt-1;
+        
+        &:hover {
+          background: lighten($color-bg-1, 8%);
+        }
+    
+        &.color-invert {
+          background: none;
+          color: $color-bg-1;
+          border: 1px solid $color-bg-1;
+        
+          &:hover {
+            background: lighten($color-bg-1, 0%) !important;
+            color: darken($color-bg-1, 15%);
+            border-color: darken($color-bg-1, 6%);
+          }
+        }
+        &.border {
+          border: 1px solid darken($color-bg-1, 6%);
+            
+          &:hover {
+            border: 1px solid darken($color-bg-1, 2%) !important;
+          }
+        }
+    }
+    &.btn_2 {
+        background: $color-bg-2;
+        color: $color-txt-2;
+        
+        &:hover {
+          background: lighten($color-bg-2, 8%);
+        }
+        &.color-invert {
+          background: none;
+          color: $color-bg-2;
+          border: 1px solid $color-bg-2;
+            
+          &:hover {
+            background: lighten($color-bg-2, 0%) !important;
+            color: darken($color-bg-2, 15%);
+            border-color: darken($color-bg-2, 6%);
+          }
+        }
+        &.border {
+          border: 1px solid darken($color-bg-2, 6%);
+        
+          &:hover {
+            border: 1px solid darken($color-bg-2, 2%) !important;
+          }
+        }
+    }
+    
+    &.btn_3 {
+        background: $color-bg-3;
+        color: $color-txt-3;
+        
+        &:hover {
+          background: lighten($color-bg-3, 8%);
+        }
+        &.color-invert {
+          background: none;
+          color: $color-bg-3;
+          border: 1px solid $color-bg-3;
+            
+          &:hover {
+            background: lighten($color-bg-3, 0%) !important;
+            color: darken($color-bg-3, 15%);
+            border-color: darken($color-bg-3, 6%);
+          }
+        }
+        &.border {
+          border: 1px solid darken($color-bg-3, 6%);
+          
+          &:hover {
+            border: 1px solid darken($color-bg-3, 2%) !important;
+          }
+        }
+    }
+    
+    &.btn_4 {
+        background: $color-bg-4;
+        color: $color-txt-4;
+        
+        &:hover {
+          background: lighten($color-bg-4, 8%);
+        }
+        &.color-invert {
+          background: none;
+          color: $color-bg-4;
+          border: 1px solid $color-bg-4;
+            
+          &:hover {
+            background: lighten($color-bg-4, 0%) !important;
+            color: darken($color-bg-4, 15%);
+            border-color: darken($color-bg-4, 6%);
+          }
+        }
+        &.border {
+          border: 1px solid darken($color-bg-4, 6%);
+            
+          &:hover {
+            border: 1px solid darken($color-bg-4, 2%) !important;
+          }
+        }
+    }
+}

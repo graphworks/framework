@@ -1,0 +1,178 @@
+// graphworks frameworks v3.0 - header, navigation
+
+///////////////////////////////////////////////////
+// Made by graphworks (@rpkaaa)
+
+header {
+    width: 100%;
+    display: block;
+    position: $nav-position;
+    top:0;
+    z-index: 9999999;
+    background-color: $header-bg;
+    border-bottom-style: solid;
+    border-bottom-color: $document-bg;
+    border-bottom-width: $nav-border;
+}
+section.first {margin-top: $nav-height;}
+nav {
+	width: 100%;
+	height: $nav-height;
+	display: block;
+
+    ul {
+        display: block;
+        width: auto;
+        height: $nav-height;
+        float: $nav-align;
+        list-style: none;
+        margin:0;
+        padding:0;
+
+        li {
+            display: block;
+            width: auto;
+            height: auto;
+            float: left;
+
+            a {
+                display: block;
+                width: auto;
+                height: $nav-height;
+                line-height: $nav-height;
+                padding: $nav-item-padding;
+                text-align: center;
+                text-decoration: none;
+                color: $nav-item-color;
+                font-size: $nav-item-fontsize;
+            
+                &.current {
+                    background-color: $nav-item-color-current-bg;
+                    color: $nav-item-color-current;
+                }
+
+                &:hover {
+                    background-color: $nav-item-color-hover-bg;
+                    color: $nav-item-color-hover;
+                    @include transition(all, $transition-3, ease);
+                }
+                &a.current:hover {
+                    background-color: $nav-item-color-current-bg;
+                    color: $nav-item-color-current;
+                }
+            }
+        }
+    }
+}
+
+header .gridContainer a.logo {
+	float:left;
+	display:block;
+	height: $nav-height;
+	width: $logo-width; /* logowidth */
+	min-width:$logo-min-width; /* logo minwidth */
+	max-width:$logo-max-width; /* logo maxwidth */
+	overflow:hidden;
+    
+    img {
+        display:block;
+        float:left;
+        vertical-align: middle;
+        height:$nav-height;
+        width: 100%;
+    }
+}
+header .scrooler ul#mobile_nav, .hamburger {display:none;}
+
+
+// responsiveness
+@media only screen and (max-width: $medium) {
+
+    header .gridContainer nav ul{display:none;}
+
+    header .gridContainer a.hamburger {
+        float:right;
+        display:block;
+        height: $nav-height;
+        width: $hamburger-size;
+        max-width: $hamburger-max-size;
+        overflow:hidden;
+        
+        figure svg {
+            display:block;
+            float:left;
+            vertical-align: middle;
+            height: $nav-height;
+            width: 100%;
+        }
+        .toggler rect {fill: $hamburger-color;}
+        figure svg:hover rect {fill: $hamburger-color-hover;}
+    }
+    header .scroller {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: $nav-height;
+        left: 0;
+        overflow-y: scroll;
+    }
+    header .scroller ul#mobile_nav {
+        display: none;
+        width: 100%;
+        position: relative;
+        height: $nav-item-number * $mobile-nav-li-height *1.2; /* x1.2 correction */
+        min-height: $nav-item-number * $mobile-nav-li-height *1.2;/* x1.2 correction */
+        padding:0;
+        margin:0;
+        z-index: 999999;
+    }
+    header .scroller ul#mobile_nav {
+        display:none;
+    }
+    header .scroller ul#mobile_nav li {
+        width:100%;
+        clear:both;
+        display:block;
+        float:left;
+        padding:0 5%;
+        margin:0;
+        border-bottom: $mobile-nav-li-separator;
+        background-color: $mobile-nav-li-bg;
+    }
+    header .scroller ul#mobile_nav li:first-child {
+        border-top: $mobile-nav-li-separator;
+    }
+    header .scroller ul#mobile_nav li a {
+        padding:0;
+        margin:0;
+        height:$mobile-nav-li-height;
+        line-height:$mobile-nav-li-height;
+        color: $mobile-nav-li-color;
+        width:100%;
+        font-weight:$mobile-nav-li-font-weight;
+        text-decoration:none;
+    }
+    header .scroller ul#mobile_nav li a.current {
+        background-color: $mobile-nav-li-bg-current;
+        color: $mobile-nav-li-color-current;
+    }
+}
+
+@media screen and (min-width: $medium) and (max-width: $large) { 
+    nav ul li a {
+        padding: $nav-item-padding /2;
+        text-align: center;
+        text-decoration: none;
+        font-size: $nav-item-fontsize - 2px;
+    }
+    .pad17 {
+        display:none !important; 
+    }
+}
+@media screen and (min-width: $large) { 
+    nav ul li a {
+        padding: $nav-item-padding /1.6;
+        font-size: $nav-item-fontsize;
+    }
+}
+
